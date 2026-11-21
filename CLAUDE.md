@@ -11,7 +11,8 @@ pull request.
   backlog, blog journal) stays in the research folder.
 - **Docs:** one Markdown page per topic in `docs/`, listed in `docs/documentation.md`, each opening
   with its own contents list. A feature's page is written or updated in the PR that builds it.
-- **Decisions made while building:** one file each in `docs/decisions/`, listed in its index, proposed in
-  the PR that makes them. The plan's own decisions stay in the notebook.
+- **Decisions:** one file for each decision that shapes this repo's code, wherever it was made, in
+  `docs/decisions/`, listed in its index and proposed in the PR that makes it. Every other decision goes
+  to the blueprint in the research folder. Each is written once; anything else links to it.
 - **`main` is protected:** every change goes through a pull request, mine included.
 - **Terms:** "e2e integration test", never "scenario test".

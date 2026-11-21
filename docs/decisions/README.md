@@ -7,9 +7,10 @@
 
 ## What goes here
 
-One short Markdown file for each decision made while building the factory, added in the pull request
-that makes it. The issue says what was wanted, the pull request says what changed, and the decision
-file says what was decided and why it still holds.
+One short Markdown file for each decision that shapes this repo's code, wherever it was made, added in
+the pull request that makes it. Decisions about the plan itself live in the blueprint, outside this
+repo. The issue says what was wanted, the pull request says what changed, and the decision file says
+what was decided and why it still holds.
 
 A run never decides for me. It proposes a decision in its pull request, with status `proposed`,
 flagged at the top of the pull request. Merging the pull request accepts it.
@@ -23,7 +24,7 @@ header, then three short sections:
 # 0001 · Run log storage
 
 - Status: proposed | accepted | replaced by [0009](0009-....md)
-- Area: run log
+- Area: Runtime
 - Issue: https://github.com/bernardjbs/software-factory/issues/12
 - Pull request: https://github.com/bernardjbs/software-factory/pull/14
 - Replaces: [0004](0004-....md) (only if it does)
@@ -56,6 +57,10 @@ related. If the new decision replaces one:
 The old file is never deleted, so the history stays readable.
 
 ## Index
+
+Areas: Workflow, Quality, Runtime, Security, Goals. One folder, no subfolders: each file carries its
+area, and the index is grouped by it. Add an area when a decision fits none; a decision spanning two
+carries both.
 
 | # | Decision | Area | Status |
 |---|---|---|---|
