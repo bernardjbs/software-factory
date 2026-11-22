@@ -15,8 +15,9 @@ Read `review.md` from the run folder (its path is given to you), then:
 
 ## Produces
 
-In an unattended run, `run-note.md` in the run folder: the issue, the pull request, whether it merged,
-and anything left open. Nothing else. In a hand run, what the project's own wrap-up writes.
+In an unattended run, `run-note.md` in the run folder: the issue, the pull request, whether it
+merged, and anything left open, including Build's notes carried in `review.md`. Nothing else. In a
+hand run, what the project's own wrap-up writes.
 
 ## Gate
 

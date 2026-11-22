@@ -21,4 +21,5 @@
 ## How they change
 
 Only through a reviewed pull request. The push script will enforce this; until it exists, a pull
-request that changes one names it under Flags in `stages/pr-template.md`, with the reason and impact.
+request that changes one names it under Flags in `stages/pr-template.md`, with the reason and
+impact.

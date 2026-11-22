@@ -12,8 +12,8 @@ it in; keep every heading, writing "None" where a section is empty.
 
 ## Flags
 
-- **Protected files:** each file from `stages/protected-files.md` this change touches, with the reason
-  and the impact.
+- **Protected files:** each file from `stages/protected-files.md` this change touches, with the
+  reason and the impact.
 - **Changed existing tests:** each existing test changed, and why.
 - **New packages:** each package added.
 

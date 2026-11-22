@@ -7,8 +7,8 @@
 
 ## Does
 
-Read `plan.md` and `build.md` (for the branch) from the run folder (its path is given to you) and check
-the branch:
+Read `plan.md`, `build.md` (for the branch) and `rounds.md` from the run folder (its path is given
+to you) and check the branch:
 
 - The full test suite, not only the new tests.
 - The real path, with the result read back from the backend, not the screen. Where there is no
@@ -19,8 +19,9 @@ the branch:
 - Types and lint.
 
 A failed check goes back to Build as a fix round: append one line to `rounds.md` in the run folder
-(round number, `check`, the reason). Failed checks and change requests share one cap of 3 fix rounds;
-before sending a fourth round back, stop and come to the developer with the log.
+(round number, `check`, the reason). Failed checks and change requests share one
+cap of 3 fix rounds; before sending a fourth round back, stop and come to the developer with
+`rounds.md`.
 
 ## Produces
 
@@ -29,7 +30,8 @@ real-path evidence read back, and for each new test the break made and the failu
 
 ## Gate
 
-None.
+None, except the cap: before sending a fourth fix round back, stop and come to the developer with
+`rounds.md`.
 
 ## Run log
 
