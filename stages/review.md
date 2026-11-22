@@ -17,7 +17,8 @@ run folder (its path is given to you), then:
   (protected files with reason and impact, changed existing tests with why, new packages), what the
   issue asked and what changed, what was checked, decisions this change makes that the issue did not
   ask for, what the reviewers found and how each was resolved; then the full diff. A file listed in
-  `stages/protected-files.md` that the change touches is named under Flags.
+  `stages/protected-files.md` that the change touches is audited first by the independent reviewer
+  and named under Flags, negative impact first.
 - Run the reviews on the draft, in this order:
   1. the independent reviewer (`.claude/agents/independent-reviewer.md`; cannot edit what it judges;
      "break it, don't confirm it");

@@ -20,6 +20,7 @@
 
 ## How they change
 
-Only through a reviewed pull request. The push script will enforce this; until it exists, a pull
-request that changes one names it under Flags in `stages/pr-template.md`, with the reason and
-impact.
+Only through a reviewed pull request. A pull request that changes one is audited first by the
+independent reviewer, then named at the top under Flags in `stages/pr-template.md`: which files,
+why, and the impact, negative impact first. The developer reads every line of it, and it
+never merges automatically. The push script will enforce this; until it exists, Review does.
