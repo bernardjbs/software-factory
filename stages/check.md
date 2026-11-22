@@ -7,7 +7,8 @@
 
 ## Does
 
-Read `plan.md` from the run folder (its path is given to you) and check the branch:
+Read `plan.md` and `build.md` (for the branch) from the run folder (its path is given to you) and check
+the branch:
 
 - The full test suite, not only the new tests.
 - The real path, with the result read back from the backend, not the screen. Where there is no
@@ -17,7 +18,9 @@ Read `plan.md` from the run folder (its path is given to you) and check the bran
   the restore landed.
 - Types and lint.
 
-A failed check goes back to Build as a fix round.
+A failed check goes back to Build as a fix round: append one line to `rounds.md` in the run folder
+(round number, `check`, the reason). Failed checks and change requests share one cap of 3 fix rounds;
+before sending a fourth round back, stop and come to the developer with the log.
 
 ## Produces
 
@@ -33,5 +36,6 @@ None.
 Only if the project's `CLAUDE.md` names a run-log command (`runlog` below stands for it):
 
 - At the start: `runlog <issue> check start`
-- At the end: `runlog <issue> check end --verdict accepted|rejected --reason "..."`
+- At the end: `runlog <issue> check end --verdict accepted|rejected --reason "..."`: `accepted` means
+  every check passed, `rejected` that it stopped or sent a fix round back.
 - For every fix round it sends back: `runlog <issue> check round <n> --reason "..."`

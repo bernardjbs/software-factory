@@ -9,7 +9,7 @@
 
 Read `intake.md` from the run folder (its path is given to you). Then write a plan holding:
 
-- The approach, which files it touches, and which existing code it reuses (found by searching first).
+- The approach, which files it touches (naming any in `stages/protected-files.md` the issue asks to change), and which existing code it reuses (found by searching first).
 - The tests:
   - first, the tests that already cover each file being changed (found by what imports it);
   - then each test to write, marked "extend `<existing file>`" or "new, because nothing covers this";
@@ -22,7 +22,8 @@ Read `intake.md` from the run folder (its path is given to you). Then write a pl
 
 ## Produces
 
-`plan.md` in the run folder: the plan above, and the developer's verdict with its reason. Plans can
+`plan.md` in the run folder: the issue number and title and the confirmed lane (from `intake.md`), the
+plan above, and the developer's verdict with its reason. Plans can
 hold detail that must not go public, so it stays in the run folder, never in the repo.
 
 ## Gate
@@ -35,7 +36,8 @@ Which plans the developer must approve depends on the lane in `intake.md`:
 - **Small:** follows the ladder. The developer approves its plans while Plan is at level 2, then
   samples them.
 - **Ambiguous:** the developer approves every plan, whatever Plan's level.
-- **High risk:** never reaches Plan; Intake marked it and the factory does not take it.
+- **High risk:** never reaches Plan; Intake ended the run, and it is done in the developer's own session
+  until Check and Review both reach level 3 on that project.
 
 During the hand runs every plan is approved, so the lane is recorded and changes nothing yet.
 

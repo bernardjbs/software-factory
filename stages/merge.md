@@ -11,11 +11,11 @@ Read `review.md` from the run folder (its path is given to you), then:
 
 - Wait: the developer merges. Never automatic; never merge it yourself.
 - Then wrap-up and the next-session note, in a hand run only, through the project's own wrap-up.
-- An unattended run never writes memory or the handover: it writes only its run note.
+- An unattended run never writes memory or the handover: it writes only its run note, `run-note.md`.
 
 ## Produces
 
-In an unattended run, the run note in the run folder: the issue, the pull request, whether it merged,
+In an unattended run, `run-note.md` in the run folder: the issue, the pull request, whether it merged,
 and anything left open. Nothing else. In a hand run, what the project's own wrap-up writes.
 
 ## Gate
