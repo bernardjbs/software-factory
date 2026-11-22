@@ -21,9 +21,9 @@ Read `plan.md` from the run folder (its path is given to you), then:
 - Run `gitleaks` before each commit; a reported leak stops the commit.
 
 A fix round (a failed check or a reviewer's change request) comes back here.
-It goes Build, then Check, then Review again. Also read `build.md` for the branch, its cause
-(`check.md` for a failed check, `review.md` for a reviewer's change request) and `rounds.md`. Make
-the fix, then run the tidy-up again, so it also runs on the fixes. Add the round's commits and notes
+It goes Build, then Check, then Review again. Also read `build.md` for the branch, `rounds.md`, and
+the round's cause: `check.md` for a failed check, `review.md` for a change request. Make the fix,
+then run the tidy-up again, so it also runs on the fixes. Add the round's commits and notes
 to `build.md`, keeping the earlier ones. Failed checks and change requests share one
 cap of 3 fix rounds, counted in `rounds.md`; the stage that sends a round back logs it.
 

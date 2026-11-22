@@ -11,8 +11,8 @@ Read `plan.md`, `build.md` (for the branch and Build's notes), `check.md` and `r
 run folder (its path is given to you), then:
 
 - **Gate:** every push waits for the developer's word, fix-round pushes included (until the push
-  script exists). Write the word to `review.md`. On a no to a push, write it to `review.md`, log
-  `review end --verdict rejected`, and stop for the developer.
+  script exists). Write the word to `review.md`. On a no to a push, stop for the developer; the pass
+  ends `rejected` (see Run log).
 - Open a draft pull request whose top follows the fixed layout in `stages/pr-template.md`: flags
   (protected files with reason and impact, changed existing tests with why, new packages), what the
   issue asked and what changed, what was checked, decisions this change makes that the issue did not
@@ -32,7 +32,8 @@ run folder (its path is given to you), then:
 - A decision the change makes is proposed as a file in the decisions folder the project's
   `CLAUDE.md` names, after checking its index for one it replaces.
 - The feature's docs page is updated in the same pull request.
-- **Gate:** the pull request is marked ready; the developer reviews.
+- **Gate:** the pull request is marked ready; the developer reviews. A change request from the
+  developer then is a fix round, sent back to Build like a reviewer's.
 
 ## Produces
 
@@ -52,8 +53,8 @@ Also stop before a fourth fix round, with `rounds.md`.
 
 ## Run log
 
-Only if the project's `CLAUDE.md` names a run-log command (`runlog` below stands for it). Once per
-pass:
+Only if the project's `CLAUDE.md` names a run-log command (`runlog` below stands for it).
+Once per pass:
 
 - When the pass starts: `runlog <issue> review start`
 - When it ends: `runlog <issue> review end --verdict accepted|rejected --reason "..."`: `accepted`

@@ -41,9 +41,9 @@ Only a "go" with a lane other than High risk goes on to Plan.
 Only if the project's `CLAUDE.md` names a run-log command (`runlog` below stands for it):
 
 - At the start: `runlog <issue> intake start`
-- At the gate, once, with the developer's verdict. `accepted` only for a go the developer confirmed
-  (the lane and size call); any other answer (needs info, reject, too big), or the developer
-  overruling Intake, logs `rejected` with the answer in `--reason`:
-  - otherwise: `runlog <issue> intake end --verdict rejected --reason "..."`
-  - for a confirmed go, instead:
-    `runlog <issue> intake end --verdict accepted --lane small|ambiguous|high-risk --size small|medium|large`
+- At the gate, once. `accepted` when the run goes on to Plan (a go in a lane other than High risk,
+  whether the developer kept Intake's lane or changed it), with the confirmed lane and Intake's
+  size:
+  `runlog <issue> intake end --verdict accepted --lane small|ambiguous|high-risk --size small|medium|large`
+- `rejected` when the run stops here (needs info, reject, too big, or a High risk lane), with the
+  answer in `--reason`: `runlog <issue> intake end --verdict rejected --reason "..."`
