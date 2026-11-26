@@ -22,9 +22,9 @@ If `--help` appears anywhere in the user's invocation, read and display [help.md
 1. **Set the run folder.** The repo root is `git rev-parse --show-toplevel`. If `FACTORY_RUN_DIR`
    is unset, ask the developer for a folder. Reuse an existing `$FACTORY_RUN_DIR/<issue>-*/` (if
    several, ask which); otherwise make `$FACTORY_RUN_DIR/<issue>-<slug>/`, the slug from the issue
-   title. Resolve the folder's real path and refuse it if it is the repo root or inside the repo: stage outputs can
-   hold detail that must not go public. If the folder already holds stage outputs, say which and
-   ask where to resume.
+   title. Resolve the folder's real path and refuse it if it is the repo root or inside the repo:
+   stage outputs can hold detail that must not go public. If the folder already holds stage
+   outputs, say which and ask where to resume.
 2. **Pin the stage files.** If the run folder holds `stages-commit`, use the commit in it.
    Otherwise run `git fetch origin main` (if it fails, stop and say so); if `origin/main` has no
    `stages/`, stop and say so; else write `git rev-parse origin/main` to `stages-commit` in the run
