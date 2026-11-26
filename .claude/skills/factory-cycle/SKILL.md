@@ -19,14 +19,18 @@ If `--help` appears anywhere in the user's invocation, read and display [help.md
 
 ## What it does
 
-1. **Find the stage files.** The repo root is `git rev-parse --show-toplevel`. Run
-   `git fetch origin main` once, record `git rev-parse origin/main` as the run's commit, and read
-   every stage from that commit, never from the working tree, the run's branch or a later fetch:
-   `git show <commit>:stages/<stage>.md`. If that commit has no `stages/`, stop and say so.
-2. **Set the run folder:** `$FACTORY_RUN_DIR/<issue>-<slug>/`, the slug from the issue title. If
-   `FACTORY_RUN_DIR` is unset, ask the developer for a folder. Resolve the folder's real path and
-   refuse it if it is the repo root or inside the repo: stage outputs can hold detail that must
-   not go public. If the folder already holds stage outputs, say which and ask where to resume.
+1. **Set the run folder.** The repo root is `git rev-parse --show-toplevel`. If `FACTORY_RUN_DIR`
+   is unset, ask the developer for a folder. Reuse an existing `$FACTORY_RUN_DIR/<issue>-*/`;
+   otherwise make `$FACTORY_RUN_DIR/<issue>-<slug>/`, the slug from the issue title. Resolve the
+   folder's real path and refuse it if it is the repo root or inside the repo: stage outputs can
+   hold detail that must not go public. If the folder already holds stage outputs, say which and
+   ask where to resume.
+2. **Pin the stage files.** If the run folder holds `stages-commit`, use the commit in it.
+   Otherwise run `git fetch origin main` (if it fails, stop and say so) and write
+   `git rev-parse origin/main` to `stages-commit` in the run folder. Read every file under `stages/`
+   from that commit, including the ones a stage names (such as `stages/protected-files.md`):
+   `git show <commit>:stages/<file>`, never the working tree, the run's branch or a later fetch.
+   If that commit has no `stages/`, stop and say so.
 3. **Run the stages in this order**, reading each in full when it starts and following it as
    written:
    - `stages/intake.md`
@@ -50,7 +54,7 @@ If `--help` appears anywhere in the user's invocation, read and display [help.md
 - Refuse a run folder inside the repo.
 - Never edit `stages/`, this skill, or a file listed in `stages/protected-files.md`, except as
   `stages/build.md` allows. A stage file that is wrong is a new issue: say what is wrong, and stop
-  at the next gate.
+  now.
 
 ## Operating principles
 

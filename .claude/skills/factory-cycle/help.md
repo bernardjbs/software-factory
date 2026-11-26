@@ -1,8 +1,8 @@
 # factory-cycle
 
 Runs one GitHub issue through the factory's cycle by hand: Intake, Plan, Build, Check, Review,
-Merge. Each stage is a file in `stages/`, read from `origin/main`; the skill follows them in order
-and stops wherever a stage's `## Gate` says.
+Merge. Each stage is a file in `stages/`, read from one `origin/main` commit recorded in the run
+folder; the skill follows them in order and stops wherever a stage's `## Gate` says.
 
 ## Usage
 
@@ -25,7 +25,12 @@ Start a new session after setting it. Unset, the skill asks for a folder at the 
 
 ## What you decide
 
-Each stage file's `## Gate` section says what you decide there and when the run waits for you.
+- Intake: confirm or change the suggested lane.
+- Plan: approve the plan, or send it back with why.
+- Review: yes or no to each push; then review the pull request once it is marked ready.
+- Merge: you merge, or not.
+
+Each stage file's `## Gate` section is the full rule.
 
 ## Where things land
 
