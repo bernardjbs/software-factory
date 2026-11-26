@@ -5,6 +5,7 @@ contents list; it is added under its group when it is written.
 
 - ## Getting Started
 - ## Architecture Concepts
+    - [The factory cycle](factory-cycle.md)
     - [Decisions](decisions/README.md)
 - ## The Basics
 - ## Digging Deeper

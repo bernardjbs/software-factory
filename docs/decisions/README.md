@@ -64,3 +64,5 @@ carries both.
 
 | # | Decision | Area | Status |
 |---|---|---|---|
+| [0001](0001-hand-run-folder.md) | Hand-run folder | Security | proposed |
+| [0002](0002-stage-files-pinned-per-run.md) | Stage files pinned per run | Security | proposed |
