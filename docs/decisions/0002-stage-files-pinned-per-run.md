@@ -18,5 +18,7 @@ and a resume reuses it. A failed fetch stops the run. The developer re-pins by d
 `stages-commit`.
 
 ## Consequences
-A run cannot weaken its own rules: an edit to a stage file on its branch or in the working tree is
-never read. A stage file fixed on `main` reaches a running issue only when the developer re-pins.
+A run cannot weaken its stage files: an edit to one on its branch or in the working tree is never
+read. A stage file fixed on `main` reaches a running issue only when the developer re-pins. The pin
+covers `stages/` only: the skill and the reviewer load from the session's checkout, so they are
+protected files, changed only through a reviewed pull request.

@@ -16,6 +16,6 @@ the `FACTORY_RUN_DIR` setting; when it is unset, the skill asks for one at the s
 The skill resolves the folder's real path and refuses one that is the repo root or inside the repo.
 
 ## Consequences
-Nothing private can be committed by accident, since it never sits in the working tree. Each machine
-sets the variable once, in a settings file that is not committed, or the developer names a folder
-on every run.
+Stage outputs cannot be committed by accident, since they never sit in the working tree. Each
+machine sets the variable once, in a settings file that is not committed, or the developer names a
+folder on every run.

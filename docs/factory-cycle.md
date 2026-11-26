@@ -79,14 +79,14 @@ developer, and what it writes to the run log. The rules live there, not here.
 3. [Build](../stages/build.md): a branch, the tests first, then the code, then a tidy-up pass.
 4. [Check](../stages/check.md): the full suite, the real path, new tests proved able to fail.
 5. [Review](../stages/review.md): a draft pull request and its reviews, then ready to review.
-6. [Merge](../stages/merge.md): the developer merges, then the wrap-up.
+6. [Merge](../stages/merge.md): the developer merges; in a hand run, then the wrap-up.
 
 Two more files in `stages/` are read by the stages: the
 [pull request template](../stages/pr-template.md) and the
 [protected-files list](../stages/protected-files.md).
 
 A run reads its stage files from one commit of `main`, pinned when the run starts, so it cannot
-change the rules it follows: [decision 0002](decisions/0002-stage-files-pinned-per-run.md).
+change the stage files it follows: [decision 0002](decisions/0002-stage-files-pinned-per-run.md).
 
 ## How the stages hand over
 
@@ -102,16 +102,9 @@ runners use the same words.
 
 ## Lanes
 
-Intake suggests a lane and the developer confirms it. The factory's plan gives each stage a trust
-level that rises with its track record; the lane decides how much of that trust an issue gets:
-
-- **Small:** the developer approves its plans until Plan has earned enough trust, then samples
-  them.
-- **Ambiguous:** the developer approves every plan, whatever Plan's level.
-- **High risk:** done in the developer's own session until Check and Review have both earned enough
-  trust on that project. Intake marks it and the factory does not take it.
-
-During the hand runs every plan is approved, so the lane is recorded and changes nothing yet.
+Intake suggests a lane (Small, Ambiguous or High risk) and the developer confirms it. What each
+lane means is in [Intake](../stages/intake.md); what it changes is in
+[Plan's gate](../stages/plan.md#gate).
 
 ## Where things live
 
@@ -126,9 +119,9 @@ During the hand runs every plan is approved, so the lane is recorded and changes
 | Each run's stage outputs | The run folder, outside the repo |
 
 The skill is a thin runner: it reads the stage files in order, runs them in the session and stops
-at each gate. It holds no stage rules of its own. Runs see only their own clone, so whatever they
-need is in the repo. The stage files and the skill are themselves protected files, changed only
-through a reviewed pull request.
+at each gate. It holds no stage rules of its own. Runs see only their own clone and the run folder
+the runner passes in, so whatever else they need is in the repo. The stage files and the skill are
+themselves protected files, changed only through a reviewed pull request.
 
 ## The hand-run setting
 
