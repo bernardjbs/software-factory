@@ -9,7 +9,7 @@
 
 Read `plan.md` from the run folder (its path is given to you), then:
 
-- Name the branch `<issue number>-<short-slug>`.
+- Name the branch `<issue number>-<short-slug>`, cut from the commit the stage files were read from.
 - Write the tests first and show each failing for the breakage the plan names; then the code.
   Keep to one concern only: anything else the work turns up becomes a note for the developer, in
   `build.md`.

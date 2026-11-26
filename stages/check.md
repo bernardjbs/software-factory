@@ -7,8 +7,8 @@
 
 ## Does
 
-Read `plan.md`, `build.md` (for the branch) and `rounds.md` from the run folder (its path is given
-to you) and check the branch:
+Read `plan.md`, `build.md` (for the branch) and `rounds.md` (absent on the first pass: no rounds
+yet) from the run folder (its path is given to you) and check the branch:
 
 - The full test suite, not only the new tests.
 - The real path, with the result read back from the backend, not the screen. Where there is no
