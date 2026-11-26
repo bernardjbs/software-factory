@@ -3,6 +3,7 @@
 The fixed layout for the top of every factory-cycle pull request, above the full diff. Review fills
 it in; keep every heading, writing "None" where a section is empty.
 
+- [How to write it](#how-to-write-it)
 - [Flags](#flags)
 - [What the issue asked](#what-the-issue-asked)
 - [What changed](#what-changed)
@@ -10,10 +11,19 @@ it in; keep every heading, writing "None" where a section is empty.
 - [Decisions](#decisions)
 - [What the reviewers found](#what-the-reviewers-found)
 
+## How to write it
+
+The developer reads this before the diff, so it must scan in seconds:
+
+- One fact per bullet, plain words first; a path or command only where the reader needs it.
+- No line breaks inside a sentence: GitHub shows each one.
+- A list of results is a table; each finding is one line, what was wrong, then what changed.
+- Commit hashes go last, never mid-sentence.
+
 ## Flags
 
-- **Protected files:** each file from `stages/protected-files.md` this change touches, with the
-  reason and the impact.
+- **Protected files:** each file from `stages/protected-files.md` this change touches and what it
+  is, then **Risk:** the negative impact, then **Audited:** who reviewed it.
 - **Changed existing tests:** each existing test changed, and why.
 - **New packages:** each package added.
 
