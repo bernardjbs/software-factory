@@ -25,10 +25,13 @@ Start a new session after setting it. Unset, the skill asks for a folder at the 
 
 ## What you decide
 
-- Intake: confirm or change the suggested lane.
+- Intake: confirm the answer and the suggested lane, or change the lane.
 - Plan: approve the plan, or send it back with why.
 - Review: yes or no to each push; then review the pull request once it is marked ready.
 - Merge: you merge, or not.
+
+The run also stops for you when Build cannot follow the plan and when the fix-round cap is reached.
+To pick up a stage file fixed on `main` mid-run, delete `stages-commit` in the run folder.
 
 Each stage file's `## Gate` section is the full rule.
 
