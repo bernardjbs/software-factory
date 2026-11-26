@@ -7,8 +7,8 @@
 
 ## Does
 
-Read `plan.md`, `build.md` (for the branch and Build's notes), `check.md` and `rounds.md` from the
-run folder (its path is given to you), then:
+Read `plan.md`, `build.md` (for the branch and Build's notes), `check.md` and `rounds.md` (absent
+if there were no rounds) from the run folder (its path is given to you), then:
 
 - **Gate:** every push waits for the developer's word, fix-round pushes included (until the push
   script exists). Write the word to `review.md`. On a no to a push, stop for the developer; the pass
